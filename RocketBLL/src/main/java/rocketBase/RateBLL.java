@@ -10,8 +10,7 @@ import rocketDomain.RateDomainModel;
 public class RateBLL {
 
 	private static RateDAL _RateDAL = new RateDAL();
-	
-	static double getRate(int GivenCreditScore) throws RateException 
+	public static double getRate(int GivenCreditScore) throws RateException 
 	{
 		double dInterestRate = 0;	
 		ArrayList<RateDomainModel> rates = RateDAL.getAllRates();
