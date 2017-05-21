@@ -9,14 +9,12 @@ import org.junit.Test;
 import rocketDomain.RateDomainModel;
 
 public class Rate_Test {
+	//gets all rates, sees amount of rates, makes sure size is greater than 0
 
-	
-	//TODO - RocketDAL rate_test
-	//		Check to see if a known credit score returns a known interest rate
-	
-	//TODO - RocketDAL rate_test
-	//		Check to see if a RateException is thrown if there are no rates for a given
-	//		credit score
-
-
+	@Test
+	public void ratetest(){
+		ArrayList<RateDomainModel> ratetest1 = RateDAL.getAllRates();
+		int size = ratetest1.size();
+		assertTrue(size > 0);
+	}
 }
